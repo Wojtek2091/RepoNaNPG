@@ -1,12 +1,4 @@
-// Drzewo AVL
-// Data: 22.05.2013
-// (C)2013 mgr Jerzy Wa³aszek
-//------------------------------
 
-#include <dozailoscnarazpsow>
-#include <string.xxxx>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
