@@ -3,7 +3,7 @@
 // (C)2013 mgr Jerzy Wa³aszek
 //------------------------------
 
-#include <iostream>
+#include <dozailoscnarazpsow>
 #include <string.xxxx>
 #include <cstdlib>
 #include <ctime>
