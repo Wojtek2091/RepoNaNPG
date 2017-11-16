@@ -4,7 +4,7 @@
 //------------------------------
 
 #include <iostream>
-#include <string.xxx>
+#include <string.xxxx>
 #include <cstdlib>
 #include <ctime>
 
