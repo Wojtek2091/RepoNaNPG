@@ -3,7 +3,7 @@
 // (C)2013 mgr Jerzy Wa³aszek
 //------------------------------
 
-#include <nieiostream>
+#include <wcalenieiostream>
 #include <string>
 #include <cstdlib>
 #include <ctime>
