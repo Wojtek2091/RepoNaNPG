@@ -1,7 +1,4 @@
-// Drzewo AVL
-// Data: 22.05.2013
-// (C)2013 mgr Jerzy Wa³aszek
-//------------------------------
+ï»¿
 
 #include <wcalenieiostream>
 #include <string>
@@ -10,7 +7,7 @@
 
 using namespace std;
 
-// Definicja typu wêz³ów drzewa AVL
+// Definicja typu wÃªzÂ³Ã³w drzewa AVL
 //---------------------------------
 struct AVLNode
 {
@@ -21,7 +18,7 @@ struct AVLNode
 // Zmienne globalne
 //-----------------
 
-string cr,cl,cp;      // ³añcuchy do znaków ramek
+string cr,cl,cp;      // Â³aÃ±cuchy do znakÃ³w ramek
 
 // Procedura wypisuje drzewo
 //--------------------------
@@ -44,7 +41,7 @@ void printBT(string sp, string sn, AVLNode * v)
   }
 }
 
-// Procedura DFS:postorder usuwaj¹ca drzewo
+// Procedura DFS:postorder usuwajÂ¹ca drzewo
 //-----------------------------------------
 void DFSRelease(AVLNode * v)
 {
@@ -52,7 +49,7 @@ void DFSRelease(AVLNode * v)
   {
     DFSRelease(v->left);   // usuwamy lewe poddrzewo
     DFSRelease(v->right);  // usuwamy prawe poddrzewo
-    delete v;              // usuwamy sam wêze³
+    delete v;              // usuwamy sam wÃªzeÂ³
   }
 }
 
@@ -166,45 +163,45 @@ void LR(AVLNode * & root, AVLNode * A)
   C->bf = 0;
 }
 
-// Wstawia nowy wêze³ do drzewa AVL
+// Wstawia nowy wÃªzeÂ³ do drzewa AVL
 // root - referencja korzenia
-// k    - klucz nowego wêz³a
+// k    - klucz nowego wÃªzÂ³a
 //---------------------------------
 void insertAVL(AVLNode * & root, int k)
 {
   AVLNode * w,* p,* r;
   bool t;
 
-  w = new AVLNode;        // tworzymy dynamicznie nowy wêze³
+  w = new AVLNode;        // tworzymy dynamicznie nowy wÃªzeÂ³
   w->left = w->right = w->up = NULL;
   w->key  = k;
   w->bf  = 0;
 
   //----------------------------------------
-  // FAZA 1 - wstawienie wêz³a do drzewa AVL
+  // FAZA 1 - wstawienie wÃªzÂ³a do drzewa AVL
   //----------------------------------------
 
   p = root;              // rozpoczynamy od korzenia
 
-  if(!p) root = w;       // jeœli drzewo jest puste, to wêze³ w umieszczamy w korzeniu
+  if(!p) root = w;       // jeÅ“li drzewo jest puste, to wÃªzeÂ³ w umieszczamy w korzeniu
   else
   {                      // inaczej szukamy miejsce dla w
     while(true)
-      if(k < p->key)     // porównujemy klucze
+      if(k < p->key)     // porÃ³wnujemy klucze
       {
-        if(!p->left)     // jeœli p nie posiada lewego syna, to
+        if(!p->left)     // jeÅ“li p nie posiada lewego syna, to
         {
-          p->left = w;   // lewym synem p staje siê wêze³ w
-          break;         // wychodzimy z pêtli
+          p->left = w;   // lewym synem p staje siÃª wÃªzeÂ³ w
+          break;         // wychodzimy z pÃªtli
         }
         p = p->left;     // inaczej przechodzimy do lewego syna
       }
       else
       {
-        if(!p->right)    // jeœli p nie posiada prawego syna, to
+        if(!p->right)    // jeÅ“li p nie posiada prawego syna, to
         {
-          p->right = w;  // prawym synem staje siê wêze³ w
-          break;         // wychodzimy z pêtli
+          p->right = w;  // prawym synem staje siÃª wÃªzeÂ³ w
+          break;         // wychodzimy z pÃªtli
         }
         p = p->right;    // inaczej przechodzimy do prawego syna
       }
@@ -212,7 +209,7 @@ void insertAVL(AVLNode * & root, int k)
     w->up = p;           // ojcem w jest p
 
     //---------------------------------
-    // FAZA 2 - równowa¿enie drzewa AVL
+    // FAZA 2 - rÃ³wnowaÂ¿enie drzewa AVL
     //---------------------------------
 
     if(p->bf) p->bf = 0; // UWAGA NR 1
@@ -223,35 +220,35 @@ void insertAVL(AVLNode * & root, int k)
       else
         p->bf = -1;
 
-      r = p->up;        // bêdziemy szli w górê drzewa w kierunku korzenia
-                        // r i p wskazuj¹ ojca i syna na tej œcie¿ce
+      r = p->up;        // bÃªdziemy szli w gÃ³rÃª drzewa w kierunku korzenia
+                        // r i p wskazujÂ¹ ojca i syna na tej Å“cieÂ¿ce
       t = false;
       while(r)
       {
         if(r->bf)
         {
-          t = true;     // ustalamy wynik pêtli
-          break;        // przerywamy pêtlê
+          t = true;     // ustalamy wynik pÃªtli
+          break;        // przerywamy pÃªtlÃª
         };
                         // inaczej modyfikujemy r.bf
         if(r->left == p) r->bf =  1;
         else             r->bf = -1;
 
-        p = r;          // przechodzimy w górê na wy¿szy poziom
+        p = r;          // przechodzimy w gÃ³rÃª na wyÂ¿szy poziom
         r = r->up;
       }
 
-      if(t)             // jeœli r.bf = +/- 1, to musimy
-      {                 // równowa¿yæ drzewo
+      if(t)             // jeÅ“li r.bf = +/- 1, to musimy
+      {                 // rÃ³wnowaÂ¿yÃ¦ drzewo
         if(r->bf == 1)
         {
-          if(r->right == p) r->bf = 0;  // ga³êzie siê równowa¿¹
+          if(r->right == p) r->bf = 0;  // gaÂ³Ãªzie siÃª rÃ³wnowaÂ¿Â¹
           else if(p->bf == -1) LR(root,r);
           else                 LL(root,r);
         }
         else
         {              // r.bf = -1
-          if(r->left == p) r->bf = 0;  // ga³êzie siê równowa¿¹
+          if(r->left == p) r->bf = 0;  // gaÂ³Ãªzie siÃª rÃ³wnowaÂ¿Â¹
           else if(p->bf == 1) RL(root,r);
           else                RR(root,r);
         }
@@ -260,7 +257,7 @@ void insertAVL(AVLNode * & root, int k)
   }
 }
 
-// Funkcja znajduje poprzednik wêz³a p
+// Funkcja znajduje poprzednik wÃªzÂ³a p
 //------------------------------------
 AVLNode * predAVL(AVLNode * p)
 {
@@ -283,12 +280,12 @@ AVLNode * predAVL(AVLNode * p)
   return p;
 }
 
-// Funkcja szuka w drzewie AVL wêz³a o zadanym kluczu.
-// Jeœli go znajdzie, zwraca jego wskazanie. Je¿eli nie,
+// Funkcja szuka w drzewie AVL wÃªzÂ³a o zadanym kluczu.
+// JeÅ“li go znajdzie, zwraca jego wskazanie. JeÂ¿eli nie,
 // to zwraca wskazanie puste.
-// Parametrami s¹:
+// Parametrami sÂ¹:
 // p - wskazanie korzenia drzewa AVL
-// k - klucz poszukiwanego wêz³a
+// k - klucz poszukiwanego wÃªzÂ³a
 //----------------------------------------------------
 AVLNode * findAVL(AVLNode * p, int k)
 {
@@ -298,9 +295,9 @@ AVLNode * findAVL(AVLNode * p, int k)
   return p;
 }
 
-// Funkcja usuwa rekurencyjnie wêze³ x
+// Funkcja usuwa rekurencyjnie wÃªzeÂ³ x
 // root - referencja do zmiennej z adresem korzenia
-// x - wskazanie usuwanego wêz³a
+// x - wskazanie usuwanego wÃªzÂ³a
 //-------------------------------------------------
 AVLNode * removeAVL(AVLNode * & root, AVLNode * x)
 {
@@ -384,17 +381,17 @@ AVLNode * removeAVL(AVLNode * & root, AVLNode * x)
 }
 
 //**********************
-//*** PROGRAM G£ÓWNY ***
+//*** PROGRAM GÂ£Ã“WNY ***
 //**********************
 
 int main()
 {
-  int Tk[32];   // tablica kluczy wêz³ów
+  int Tk[32];   // tablica kluczy wÃªzÂ³Ã³w
   int i,x,i1,i2;
   AVLNode * root = NULL;
 
-  // ustawiamy ³añcuchy znakowe, poniewa¿ nie wszystkie edytory pozwalaj¹
-  // wstawiaæ znaki konsoli do tworzenia ramek.
+  // ustawiamy Â³aÃ±cuchy znakowe, poniewaÂ¿ nie wszystkie edytory pozwalajÂ¹
+  // wstawiaÃ¦ znaki konsoli do tworzenia ramek.
   // cr = +--
   //      |
 
@@ -411,10 +408,10 @@ int main()
 
   srand(time(NULL));        // inicjujemy generator pseudolosowy
 
-  for(i = 0; i < 32; i++)   // Tablicê wype³niamy wartoœciami kluczy
+  for(i = 0; i < 32; i++)   // TablicÃª wypeÂ³niamy wartoÅ“ciami kluczy
     Tk[i] = i + 1;
 
-  for(i = 0; i < 300; i++)  // Mieszamy tablicê
+  for(i = 0; i < 300; i++)  // Mieszamy tablicÃª
   {
     i1 = rand() % 32;       // Losujemy 2 indeksy
     i2 = rand() % 32;
@@ -432,17 +429,17 @@ int main()
 
   cout << endl << endl;
 
-  printBT("","",root);      // Wyœwietlamy zawartoœæ drzewa AVL
+  printBT("","",root);      // WyÅ“wietlamy zawartoÅ“Ã¦ drzewa AVL
 
   cout << endl << endl;
 
-  for(i = 0; i < 300; i++)  // Ponownie mieszamy tablicê
+  for(i = 0; i < 300; i++)  // Ponownie mieszamy tablicÃª
   {
     i1 = rand() % 32; i2 = rand() % 32;
     x = Tk[i1]; Tk[i1] = Tk[i2]; Tk[i2] = x;
   }
 
-  for(i = 0; i < 15; i++)    // Usuwamy 15 wêz³ów
+  for(i = 0; i < 15; i++)    // Usuwamy 15 wÃªzÂ³Ã³w
   {
     cout << Tk[i] << " ";
     removeAVL(root,findAVL(root,Tk[i]));
@@ -450,9 +447,9 @@ int main()
 
   cout << endl << endl;
 
-  printBT("","",root);      // Wyœwietlamy zawartoœæ drzewa AVL
+  printBT("","",root);      // WyÅ“wietlamy zawartoÅ“Ã¦ drzewa AVL
 
-  DFSRelease(root);         // Usuwamy drzewo AVL z pamiêci
+  DFSRelease(root);         // Usuwamy drzewo AVL z pamiÃªci
 
   return 0;
 }
