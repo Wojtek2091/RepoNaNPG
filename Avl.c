@@ -445,11 +445,6 @@ int main()
     removeAVL(root,findAVL(root,Tk[i]));
   }
 
-  cout << endl << endl;
-
-  printBT("","",root);      // Wyœwietlamy zawartoœæ drzewa AVL
-
-  DFSRelease(root);         // Usuwamy drzewo AVL z pamiêci
-
   return 0;
 }
+  
