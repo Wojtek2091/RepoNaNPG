@@ -35,26 +35,7 @@ BSTNode * readBST()
   for(i = 0; i < n; i++) vp[i] = new BSTNode;
 
   // Teraz wczytujemy definicjê drzewa i tworzymy jego strukturê
-  // w pamiêci wype³niaj¹c odpowiednie pola wêz³ów.
-
-  for(i = 0; i < n; i++)
-  {
-    cin >> key >> l >> r;   // Czytamy klucz, numer lewego i prawego syna
-
-    vp[i]->key = key;       // Ustawiamy klucz
-
-    vp[i]->left  = l ? vp[l]: NULL;  // Ustawiamy lewego syna
-
-    vp[i]->right = r ? vp[r]: NULL;  // Ustawiamy prawego syna
-
-  }
-
-  BSTNode * p = vp[0];      // Zapamiêtujemy korzeñ
-
-  delete [] vp;             // Usuwamy tablicê dynamiczn¹
-
-  return p;
-}
+  // w pamiêci wype³niaj¹c odpowiednie pola wêz³ów
 
 // Funkcja szuka w drzewie BST wêz³a o zadanym kluczu.
 // Jeœli go znajdzie, zwraca jego wskazanie. Je¿eli nie,
@@ -138,6 +119,29 @@ int main()
     }
   }
   else cout << "BST is empty!!!" << endl;
+  if(root)
+  {
+    mink = minBST(root)->key; // Odczytujemy klucz minimalny
+    maxk = maxBST(root)->key; // Odczytujemy klucz maksymalny
+
+    // Przechodzimy przez kolejne wartoœci kluczy
+
+    for(k = mink; k <= maxk; k++)
+    {
+      p = findBST(root,k);    // szukamy wêz³a o kluczu k
+
+      cout << "KEY = " << setw(3) <<  k << " : ";
+
+      if(p)
+      {
+        if (!p->left && !p->right) cout << "LEAF";
+        else                       cout << "INNER NODE";
+      }
+      else cout << "NONE";
+
+      cout << endl;
+    }
+  }
 
   DFSRelease(root);    // usuwamy drzewo z pamiêci
 
