@@ -1,3 +1,11 @@
+// Przechodzenie drzew binarnych BFS
+// Data: 23.01.2013
+// (C)2013 mgr Jerzy Wa³aszek
+//------------------------------
+
+program BFS;
+
+// Typ wêz³ów drzewa
 
 type
   PBTNode = ^BTNode;
@@ -44,7 +52,8 @@ begin
   qcnt := 0;  // pusta kolejka
 end;
 
-
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
 destructor queue.destroy;
 begin
   SetLength(Q,0);
@@ -143,29 +152,4 @@ begin
 
   Q.destroy;
 
-end.
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-
+end. 

@@ -71,27 +71,6 @@ BSTNode * maxBST(BSTNode * p)
 
   return p;
 }
-BSTNode * maxBST(BSTNode * p)
-{
-  if(p) while(p->right) p = p->right;
-
-  return p;
-}
-
-BSTNode * maxBST(BSTNode * p)
-{
-  if(p) while(p->right) p = p->right;
-
-  return p;
-}
-
-BSTNode * maxBST(BSTNode * p)
-{
-  if(p) while(p->right) p = p->right;
-
-  return p;
-}
-
 
 // Procedura DFS:postorder usuwaj¹ca drzewo
 //-----------------------------------------
@@ -167,14 +146,4 @@ int main()
   DFSRelease(root);    // usuwamy drzewo z pamiêci
 
   return 0;
-
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
-
 } 
