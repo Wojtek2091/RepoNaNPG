@@ -9,30 +9,7 @@ const double eps = 1e-12;
 
 // Funkcja realizuje algorytm Doolitle'a rozk³adu LU
 //--------------------------------------------------
-bool Doolitle(int n, double ** A)
-{
-  int i,j,k;
-  double s;
-  
-  for(j = 0; j < n; j++)
-  {
-    if(fabs(A[j][j]) < eps) return false;
-    for(i = 0; i <= j; i++)
-    {
-      s = 0;
-      for(k = 0; k < i; k++) s +=  A[i][k] * A[k][j];
-      A[i][j] -= s;
-    }
-    for(i = j + 1; i < n; i++)
-    {
-      s = 0;
-      for(k = 0; k < j; k++) s += A[i][k] * A[k][j];
-      A[i][j] = (A[i][j] - s) / A[j][j];
-    }
-  }
-  return true;
-}
-
+b
 // Program g³ówny
 
 int main()
@@ -74,3 +51,28 @@ int main()
   delete [] A;
   return 0;
 }
+
+ool Doolitle(int n, double ** A)
+{
+  int i,j,k;
+  double s;
+  
+  for(j = 0; j < n; j++)
+  {
+    if(fabs(A[j][j]) < eps) return false;
+    for(i = 0; i <= j; i++)
+    {
+      s = 0;
+      for(k = 0; k < i; k++) s +=  A[i][k] * A[k][j];
+      A[i][j] -= s;
+    }
+    for(i = j + 1; i < n; i++)
+    {
+      s = 0;
+      for(k = 0; k < j; k++) s += A[i][k] * A[k][j];
+      A[i][j] = (A[i][j] - s) / A[j][j];
+    }
+  }
+  return true;
+}
+
