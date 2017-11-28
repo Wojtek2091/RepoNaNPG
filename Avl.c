@@ -380,9 +380,7 @@ AVLNode * removeAVL(AVLNode * & root, AVLNode * x)
   return x;
 }
 
-//**********************
-//*** PROGRAM G£ÓWNY ***
-//**********************
+
 
 int main()
 {
