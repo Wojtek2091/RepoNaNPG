@@ -389,18 +389,6 @@ int main()
   int Tk[32];   // tablica kluczy wêz³ów
   int i,x,i1,i2;
   AVLNode * root = NULL;
-
-  // ustawiamy ³añcuchy znakowe, poniewa¿ nie wszystkie edytory pozwalaj¹
-  // wstawiaæ znaki konsoli do tworzenia ramek.
-  // cr = +--
-  //      |
-
-  // cl = |
-  //      +--
-
-  // cp = |
-  //      |
-
   cr = cl = cp = "  ";
   cr[0] = 218; cr[1] = 196;
   cl[0] = 192; cl[1] = 196;
