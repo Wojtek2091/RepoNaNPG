@@ -1,11 +1,3 @@
-// Przechodzenie drzew binarnych BFS
-// Data: 23.01.2013
-// (C)2013 mgr Jerzy Wa³aszek
-//------------------------------
-
-program BFS;
-
-// Typ wêz³ów drzewa
 
 type
   PBTNode = ^BTNode;
