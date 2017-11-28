@@ -149,3 +149,28 @@ begin
   Q.destroy;
 
 end. 
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+
