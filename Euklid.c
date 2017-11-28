@@ -23,8 +23,8 @@ int main()
   }
   if(z == 1)
   {
-    if(x < 0) x += b;
-    cout << x << endl;
+    if(x < 0) x += b;  	   // komentarz
+    cout << x << endl;	   // tu tż			
   }
   else cout << "BRAK\n";
   return 0;
