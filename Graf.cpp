@@ -17,8 +17,8 @@ struct slistEl
 
 int main()
 {
-  int n,m;                        // Liczba wierzcho³ków, liczba krawêdzi
-  slistEl **G;                    // Graf
+  int n,m;                        
+  slistEl **G;                    
   int dg,dv,i,v,u;
   slistEl *p,*r;
 
@@ -31,13 +31,13 @@ int main()
 
   for(i = 0; i < m; i++)
   {
-    cin >> v >> u;                // Czytamy wierzcho³ki
-    p = new slistEl;              // Tworzymy rekord listy
-    p->v = u;                     // Wype³niamy go danymi
-    p->next = G[v];               // Rekord do³¹czamy do listy s¹siedztwa wierzcho³ka v
+    cin >> v >> u;                
+    p = new slistEl;              
+    p->v = u;                     
+    p->next = G[v];               
     G[v] = p;
 
-    if(v != u)                    // To samo dla krawêdzi odwrotnej o ile nie jest to pêtla
+    if(v != u)                    
     {
       p = new slistEl;
       p->v = v;
