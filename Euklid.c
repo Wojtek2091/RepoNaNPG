@@ -5,6 +5,12 @@ using namespace std;
 
 int main()
 {
+  other()
+  return 0;
+}
+
+void other(){
+	
   int a,b,u,w,x,z,q;
 
   cin >> a >> b;
@@ -26,6 +32,7 @@ int main()
     if(x < 0) x += b;
     cout << x << endl;
   }
-  else cout << "BRAK\n";
+  else cout << "BRAK\n";  
   return 0;
+
 }
