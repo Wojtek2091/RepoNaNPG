@@ -163,4 +163,12 @@ int main()
   DFSRelease(root);    // usuwamy drzewo z pamiêci
 
   return 0;
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
+// Destruktor - zwalnia tablicê dynamiczn¹
+//----------------------------------------
 } 
