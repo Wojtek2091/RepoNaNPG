@@ -7,19 +7,6 @@ typedef unsigned long long ulong;
 
 // Funkcja mno¿y a i b mod n
 //--------------------------
-ulong MnozModulo(ulong a, ulong b, ulong n)
-{
-  ulong m,w;
-
-  w = 0; m = 1;
-  while(m)
-  {
-    if(b & m) w = (w + a) % n;
-    a = (a << 1) % n;
-    m <<= 1;
-  }
-  return w;
-}
 
 int main()
 {
@@ -36,3 +23,18 @@ int main()
   cout << w << endl;
   return 0;
 } 
+
+long MnozModulo(ulong a, ulong b, ulong n)
+{
+  ulong m,w;
+
+  w = 0; m = 1;
+  while(m)
+  {
+    if(b & m) w = (w + a) % n;
+    a = (a << 1) % n;
+    m <<= 1;
+  }
+  return w;
+}
+
