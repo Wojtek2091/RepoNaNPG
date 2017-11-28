@@ -9,21 +9,22 @@ int main()
 
   cin >> a >> b;
   u = 1; w = a;
-  x = 0; z = b;
+  x = 0; z = b; 
   while(w)
   {
-    if(w < z)
-    {
+    if(w < z)   
+    {    
+      q = w; w = z; z = q; 
       q = u; u = x; x = q;
-      q = w; w = z; z = q;
-    }
+        
+    }   
     q = w / z;
     u -= q * x;
     w -= q * z;
   }
   if(z == 1)
   {
-    if(x < 0) x += b;  	   
+    if(x < 0) x += b;  	      
     cout << x << endl;	   			
   }
   else cout << "BRAK\n";
