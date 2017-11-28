@@ -101,15 +101,6 @@ begin
     dec(qcnt);
     inc(qptr);
     if qptr = n then qptr := 0;
-  end;
-end;
-
-// Tworzenie struktury drzewa rozpoczynamy od liœci
-
-var
-
-  G : BTNode = (left:nil; right:nil; data:'G');
-  H : BTNode = (left:nil; right:nil; data:'H');
   I : BTNode = (left:nil; right:nil; data:'I');
   J : BTNode = (left:nil; right:nil; data:'J');
   K : BTNode = (left:nil; right:nil; data:'K');
@@ -121,6 +112,10 @@ var
   F : BTNode = (left: @K; right:nil; data:'F');
   B : BTNode = (left: @D; right: @E; data:'B');
   C : BTNode = (left: @F; right: @G; data:'C');
+  D : BTNode = (left: @H; right: @I; data:'D');
+  E : BTNode = (left: @J; right:nil; data:'E');
+  F : BTNode = (left: @K; right:nil; data:'F');
+  B : BTNode = (left: @D; right: @E; data:'B');
 
 // Korzeñ drzewa
 
