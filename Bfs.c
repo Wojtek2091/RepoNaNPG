@@ -44,8 +44,7 @@ begin
   qcnt := 0;  // pusta kolejka
 end;
 
-// Destruktor - zwalnia tablicê dynamiczn¹
-//----------------------------------------
+
 destructor queue.destroy;
 begin
   SetLength(Q,0);
