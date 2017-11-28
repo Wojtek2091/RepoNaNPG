@@ -90,6 +90,27 @@ BSTNode * maxBST(BSTNode * p)
 
   return p;
 }
+BSTNode * maxBST(BSTNode * p)
+{
+  if(p) while(p->right) p = p->right;
+
+  return p;
+}
+
+BSTNode * maxBST(BSTNode * p)
+{
+  if(p) while(p->right) p = p->right;
+
+  return p;
+}
+
+BSTNode * maxBST(BSTNode * p)
+{
+  if(p) while(p->right) p = p->right;
+
+  return p;
+}
+
 
 // Procedura DFS:postorder usuwaj¹ca drzewo
 //-----------------------------------------
