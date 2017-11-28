@@ -3,6 +3,23 @@
 #include <cmath>
 
 using namespace std;
+void Fermat(unsigned int p);
+
+int main()
+{
+  unsigned int p;
+
+  cin >> p;
+  while(p % 2 == 0)
+  {
+    p /= 2;
+    cout << 2 << " ";
+  }
+  if(p > 1) Fermat(p);
+  cout << endl;
+  return 0;
+}
+
 
 void Fermat(unsigned int p)
 {
@@ -27,17 +44,3 @@ void Fermat(unsigned int p)
   cout << p << " ";
 }
 
-int main()
-{
-  unsigned int p;
-
-  cin >> p;
-  while(p % 2 == 0)
-  {
-    p /= 2;
-    cout << 2 << " ";
-  }
-  if(p > 1) Fermat(p);
-  cout << endl;
-  return 0;
-}
